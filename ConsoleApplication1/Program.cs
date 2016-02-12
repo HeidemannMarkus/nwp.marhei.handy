@@ -13,22 +13,29 @@ namespace ConsoleApplication1
    {
       static void Main(string[] args)
       {
-         var myLamp = new Lamp("Lamp switched on", "Lamp switched off");
-         var mySwitch = new Switch(myLamp);
+         var switches = new List<Switch>
+         {
+            new Switch(new Lamp("First lamp switched off", "First lamp switched on")),
+            new Switch(new Washer("First washer stopped", "First washer started"))
+         };
 
-         var mySwitch2 = new Switch(new Washer("Washer stopped", "Washer started"));
+         Console.WriteLine(" Eingabe von 2 Zeichen erwartet (q zum quit): \n\tIndex\n\tAction (e = on & a = off");
 
          string theKey = "q";
          do
          {
             theKey = Console.ReadLine();
-            switch (theKey.ElementAt(0))
+            if (theKey.ElementAt(0) == 'q')
+            {
+               break;
+            }
+            switch (theKey.ElementAt(1))
             {
                case 'e':
-                  mySwitch.SwitchOn();
+                  switches[Int32.Parse(theKey.ElementAt(0).ToString())].SwitchOn();
                   break;
                case 'a':
-                  mySwitch.SwitchOff();
+                  switches[Int32.Parse(theKey.ElementAt(0).ToString())].SwitchOff();
                   break;
                default:
                   break;

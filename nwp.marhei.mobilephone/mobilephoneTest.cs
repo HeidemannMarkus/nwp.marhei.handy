@@ -14,7 +14,7 @@ namespace nwp.marhei.mobilephone
          var loadpath =
               @"D:\MyUserData\Documents\Ausbildung\Vertiefung - Programmiertechnik\nwp.marhei.handy\nwp.marhei.handy\nwp.marhei.mobilephoneLibary\Serialize\handyList.xml";
 
-         var phoneList = SerializeStuff.FromXml(loadpath, new MobilePhoneList());
+         var phoneList = new BinaryParser().FromFile<MobilePhoneList>(loadpath);
          /*var phoneList = new MobilePhoneList
          {
             new Mobilephone
@@ -67,7 +67,7 @@ namespace nwp.marhei.mobilephone
               @"D:\MyUserData\Documents\Ausbildung\Vertiefung - Programmiertechnik\nwp.marhei.handy\nwp.marhei.handy\nwp.marhei.mobilephoneLibary\Serialize\handyList.xml";
 
 
-//         SerializeStuff.AsXml(filepath, phoneList);
+         new XmlParser().ToFile(filepath, phoneList);
 
          //Console.WriteLine(phoneList.ToString());
          Console.ReadKey();

@@ -45,7 +45,9 @@
     <Compile Include="IMobilePhoneList.cs" />
     <Compile Include="mobilephone.cs" />
     <Compile Include="MobilePhoneList.cs" />
-    <Compile Include="Parser\SerializeStuff.cs" />
+    <Compile Include="Parser\BinaryParser.cs" />
+    <Compile Include="Parser\ISerializeStuff.cs" />
+    <Compile Include="Parser\XmlParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
