@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ArrayOfMobilephone xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Mobilephone>
+    <Producer>Apple</Producer>
+    <Model>Iphone</Model>
+    <SerialNumber>83938S3TY5K</SerialNumber>
+    <Price>1000</Price>
+  </Mobilephone>
+  <Mobilephone>
+    <Producer>Nokia</Producer>
+    <Model>Lumia 924</Model>
+    <SerialNumber>83338S3TY5K</SerialNumber>
+    <Price>400</Price>
+  </Mobilephone>
+  <Mobilephone>
+    <Producer>Nokia</Producer>
+    <Model>Lumia 925</Model>
+    <SerialNumber>83338S3TY5K</SerialNumber>
+    <Price>500</Price>
+  </Mobilephone>
+  <Mobilephone>
+    <Producer>Nokia</Producer>
+    <Model>Lumia 920</Model>
+    <SerialNumber>83338S3TY5K</SerialNumber>
+    <Price>460</Price>
+  </Mobilephone>
+  <Mobilephone>
+    <Producer>Nokia</Producer>
+    <Model>Lumia 922</Model>
+    <SerialNumber>83338S3TY5K</SerialNumber>
+    <Price>460</Price>
+  </Mobilephone>
+</ArrayOfMobilephone>
