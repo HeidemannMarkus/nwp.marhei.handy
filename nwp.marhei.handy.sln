@@ -1,9 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nwp.marhei.mobilephoneLibary", "nwp.marhei.mobilephoneLibary\nwp.marhei.mobilephoneLibary.csproj", "{844D1DFE-D4E7-49BA-84E0-212349F09C48}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nwp.marhei.mobilephone", "nwp.marhei.mobilephone\nwp.marhei.mobilephone.csproj", "{03529D3E-41C2-47B9-8902-36D0385B1EB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{ED03E3F8-5858-45A9-9774-076DDA54D2D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,18 @@ Global
 		{03529D3E-41C2-47B9-8902-36D0385B1EB9}.Release|Mixed Platforms.Build.0 = Release|x86
 		{03529D3E-41C2-47B9-8902-36D0385B1EB9}.Release|x86.ActiveCfg = Release|x86
 		{03529D3E-41C2-47B9-8902-36D0385B1EB9}.Release|x86.Build.0 = Release|x86
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Debug|x86.Build.0 = Debug|Any CPU
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Release|x86.ActiveCfg = Release|Any CPU
+		{ED03E3F8-5858-45A9-9774-076DDA54D2D1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
