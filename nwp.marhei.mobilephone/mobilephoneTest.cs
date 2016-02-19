@@ -12,7 +12,7 @@ namespace nwp.marhei.mobilephone
       static void Main(string[] args)
       {
          var loadpath =
-              @"D:\MyUserData\Documents\Ausbildung\Vertiefung - Programmiertechnik\nwp.marhei.handy\nwp.marhei.handy\nwp.marhei.mobilephoneLibary\Serialize\handyList.xml";
+              @"D:\MyUserData\Documents\Ausbildung\Vertiefung - Programmiertechnik\nwp.marhei.handy\nwp.marhei.handy\nwp.marhei.mobilephoneLibary\Serialize\handyList.dat";
 
          var phoneList = new BinaryParser().FromFile<MobilePhoneList>(loadpath);
          /*var phoneList = new MobilePhoneList
