@@ -28,14 +28,6 @@
             <Button x:Name="buttonAddMobilephone" Content="Button" HorizontalAlignment="Left" Margin="138,141,0,0" VerticalAlignment="Top" Width="75" Click="buttonAddMobilephone_Click"/>
             <GroupBox x:Name="groupBox1" Header="GroupBox" HorizontalAlignment="Left" Margin="278,0,-369,-5" VerticalAlignment="Top" Width="354" Height="183">
                 <ListView x:Name="listViewMobilePhoneList" RenderTransformOrigin="0.5,0.5" >
-                    <ListView.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.279"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </ListView.RenderTransform>
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Path=Id}"/>
