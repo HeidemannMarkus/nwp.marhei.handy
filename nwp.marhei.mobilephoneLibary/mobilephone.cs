@@ -13,7 +13,7 @@ namespace nwp.marhei.mobilephoneLibary
       public string SerialNumber { get; set; }
       public double Price { get; set; }
 
-      public Mobilephone(string producer, string model, string serialNumber, double price): base()
+      public Mobilephone(string producer, string model, string serialNumber, double price)
       {
          Producer = producer;
          Model = model;

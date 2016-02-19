@@ -1,8 +1,10 @@
-﻿using System;
-
-namespace GUI_WPF3
+﻿namespace GUI_WPF3
 {
+   using System.IO;
+   using nwp.marhei.mobilephoneLibary.Parser;
    using System.Windows;
+
+   using Microsoft.Win32;
 
    using nwp.marhei.mobilephoneLibary;
    /// <summary>
@@ -29,8 +31,8 @@ namespace GUI_WPF3
             SerialNumber = textBoxSerial_Number.Text
          };
          mbList.AddHandy(h);
-         ClearInputForHandy();
          listViewMobilePhoneList.Items.Refresh();
+         ClearInputForHandy();
       }
 
       private void ClearInputForHandy()
@@ -40,6 +42,46 @@ namespace GUI_WPF3
          textBoxSerial_Number.Text = string.Empty;
          textBoxPrice.Text = string.Empty;
 
+      }
+
+      private void buttonSaveList_Click(object sender, RoutedEventArgs e)
+      {
+         SaveFileDialog dialog = new SaveFileDialog();
+         dialog.Filter = "fileTypes with serializer (DAT, XML)|*.DAT;*.XML";
+
+         if (dialog.ShowDialog() == true)
+         {
+            if (Path.GetExtension(dialog.FileName) == ".dat")
+            {
+               new BinaryParser().ToFile(dialog.FileName, mbList);
+            }
+            else if (Path.GetExtension(dialog.FileName) == ".xml")
+            {
+               new XmlParser().ToFile(dialog.FileName, mbList);
+            }
+         }
+      }
+
+      private void buttonLoadList_Click(object sender, RoutedEventArgs e)
+      {
+         OpenFileDialog dialog = new OpenFileDialog();
+         dialog.Filter = "Serialized Files (DAT, XML)|*.DAT;*.XML;";
+
+         if (dialog.ShowDialog() == true)
+         {
+            if (Path.GetExtension(dialog.FileName) == ".dat")
+            {
+               mbList.AddRange(new BinaryParser().FromFile<MobilePhoneList>(dialog.FileName));
+               listViewMobilePhoneList.Items.Refresh();
+            }
+            else if (Path.GetExtension(dialog.FileName) == ".xml")
+            {
+               mbList.AddRange(new XmlParser().FromFile<MobilePhoneList>(dialog.FileName));
+               listViewMobilePhoneList.Items.Refresh();
+
+            }
+
+         }
       }
    }
 }

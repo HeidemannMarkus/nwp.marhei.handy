@@ -16,7 +16,7 @@ namespace nwp.marhei.mobilephoneLibary
    [Serializable]
    public abstract class DomainObject
    {
-      protected Guid Id { get; set; }
+      public Guid Id { get; set; }
 
       protected DomainObject()
       {
