@@ -2,17 +2,12 @@
 
 namespace ConsoleApplication1.Output
 {
+   [Serializable]
    public class Washer : ISwitchable
    {
       private bool _status;
-      private readonly string _onMessage;
-      private readonly string _offMessage;
-
-      public Washer(string offMessage, string onMessage)
-      {
-         _offMessage = offMessage;
-         _onMessage = onMessage;
-      }
+      public string OnMessage { private get; set; }
+      public string OffMessage { private get; set; }
 
       public bool On()
       {
@@ -21,7 +16,7 @@ namespace ConsoleApplication1.Output
             return false;
          }
          _status = true;
-         Console.WriteLine(_onMessage);
+         Console.WriteLine(OnMessage);
          return true;
       }
 
@@ -32,7 +27,7 @@ namespace ConsoleApplication1.Output
             return false;
          }
          _status = false;
-         Console.WriteLine(_offMessage);
+         Console.WriteLine(OffMessage);
          return true;
       }
    }

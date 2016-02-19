@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ConsoleApplication1.Input;
 using ConsoleApplication1.Logic;
 using ConsoleApplication1.Output;
+using nwp.marhei.mobilephoneLibary.Parser;
 
 namespace ConsoleApplication1
 {
@@ -15,8 +16,8 @@ namespace ConsoleApplication1
       {
          var switches = new List<Switch>
          {
-            new Switch(new Lamp("First lamp switched off", "First lamp switched on")),
-            new Switch(new Washer("First washer stopped", "First washer started"))
+            new Switch {OnOff = new Lamp {OffMessage = "First lamp switched off", OnMessage = "First lamp switched on"}},
+            new Switch {OnOff = new Washer {OffMessage = "First washer stopped", OnMessage = "First washer started"}}
          };
 
          Console.WriteLine(" Eingabe von 2 Zeichen erwartet (q zum quit): \n\tIndex\n\tAction (e = on & a = off");
@@ -36,6 +37,10 @@ namespace ConsoleApplication1
                   break;
                case 'a':
                   switches[Int32.Parse(theKey.ElementAt(0).ToString())].SwitchOff();
+                  break;
+               case 's':
+                  new XmlParser().ToFile(@"D:\MyUserData\Documents\Ausbildung\Vertiefung - Programmiertechnik\nwp.marhei.handy\nwp.marhei.handy\nwp.marhei.mobilephoneLibary\Serialize\switch" + "1",
+                     switches[Int32.Parse(theKey.ElementAt(0).ToString())]);
                   break;
                default:
                   break;

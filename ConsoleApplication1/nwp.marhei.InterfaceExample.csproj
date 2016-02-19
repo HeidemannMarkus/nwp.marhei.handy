@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Input\Helper.cs" />
     <Compile Include="Logic\ISwitch.cs" />
-    <Compile Include="Logic\Switch.cs" />
+    <Compile Include="Logic\Switch2.cs" />
     <Compile Include="Output\ISwitchable.cs" />
     <Compile Include="Output\Lamp.cs" />
     <Compile Include="Output\Switchable.cs" />
@@ -55,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\nwp.marhei.mobilephoneLibary\nwp.marhei.mobilephoneLibary.csproj">
+      <Project>{844D1DFE-D4E7-49BA-84E0-212349F09C48}</Project>
+      <Name>nwp.marhei.mobilephoneLibary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

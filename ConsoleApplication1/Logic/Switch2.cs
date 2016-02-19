@@ -7,18 +7,14 @@ using ConsoleApplication1.Output;
 
 namespace ConsoleApplication1.Logic
 {
+   [Serializable]
    public class Switch : ISwitch
    {
-      private ISwitchable _onOff;
-
-      public Switch(ISwitchable onOff)
-      {
-         this._onOff = onOff;
-      }
-
+      public ISwitchable OnOff { get; set; }
+      
       public void SwitchOn()
       {
-         if (!_onOff.On())
+         if (!OnOff.On())
          {
             Console.WriteLine("Is on already");
          }
@@ -26,7 +22,7 @@ namespace ConsoleApplication1.Logic
 
       public void SwitchOff()
       {
-         if (!_onOff.Off())
+         if (!OnOff.Off())
          {
             Console.WriteLine("Is off already");
          }

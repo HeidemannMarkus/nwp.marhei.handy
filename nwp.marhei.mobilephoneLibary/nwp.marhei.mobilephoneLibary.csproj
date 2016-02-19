@@ -46,6 +46,7 @@
     <Compile Include="mobilephone.cs" />
     <Compile Include="MobilePhoneList.cs" />
     <Compile Include="Parser\BinaryParser.cs" />
+    <Compile Include="Parser\CsvParser.cs" />
     <Compile Include="Parser\ISerializeStuff.cs" />
     <Compile Include="Parser\XmlParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
