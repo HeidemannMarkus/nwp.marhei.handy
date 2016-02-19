@@ -1,4 +1,6 @@
-﻿namespace GUI_WPF3
+﻿using System;
+
+namespace GUI_WPF3
 {
    using System.Windows;
 
@@ -8,9 +10,13 @@
    /// </summary>
    public partial class MainWindow : Window
    {
+      MobilePhoneList mbList = new MobilePhoneList();
       public MainWindow()
       {
          InitializeComponent();
+         ClearInputForHandy();
+         textBoxProducer.Focus();
+         listViewMobilePhoneList.ItemsSource = mbList;
       }
 
       private void buttonAddMobilephone_Click(object sender, RoutedEventArgs e)
@@ -22,7 +28,17 @@
             Producer = textBoxProducer.Text,
             SerialNumber = textBoxSerial_Number.Text
          };
-         System.Console.WriteLine(h);
+         mbList.AddHandy(h);
+         ClearInputForHandy();
+         listViewMobilePhoneList.Items.Refresh();
+      }
+
+      private void ClearInputForHandy()
+      {
+         textBoxProducer.Text = string.Empty;
+         textBoxModel.Text = string.Empty;
+         textBoxSerial_Number.Text = string.Empty;
+         textBoxPrice.Text = string.Empty;
 
       }
    }
