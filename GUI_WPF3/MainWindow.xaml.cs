@@ -1,18 +1,19 @@
-﻿namespace GUI_WPF3
+﻿using System;
+using System.IO;
+using System.Windows;
+using Microsoft.Win32;
+using nwp.marhei.mobilephoneLibary;
+using nwp.marhei.mobilephoneLibary.Parser;
+
+namespace GUI_WPF3
 {
-   using System.IO;
-   using nwp.marhei.mobilephoneLibary.Parser;
-   using System.Windows;
-
-   using Microsoft.Win32;
-
-   using nwp.marhei.mobilephoneLibary;
    /// <summary>
-   /// Interaction logic for MainWindow.xaml
+   ///    Interaction logic for MainWindow.xaml
    /// </summary>
    public partial class MainWindow : Window
    {
-      MobilePhoneList mbList = new MobilePhoneList();
+      private readonly MobilePhoneList mbList = new MobilePhoneList();
+
       public MainWindow()
       {
          InitializeComponent();
@@ -23,7 +24,7 @@
 
       private void buttonAddMobilephone_Click(object sender, RoutedEventArgs e)
       {
-         Mobilephone h = new Mobilephone
+         var h = new Mobilephone
          {
             Model = textBoxModel.Text,
             Price = double.Parse(textBoxPrice.Text),
@@ -41,46 +42,56 @@
          textBoxModel.Text = string.Empty;
          textBoxSerial_Number.Text = string.Empty;
          textBoxPrice.Text = string.Empty;
-
       }
 
       private void buttonSaveList_Click(object sender, RoutedEventArgs e)
       {
-         SaveFileDialog dialog = new SaveFileDialog();
-         dialog.Filter = "fileTypes with serializer (DAT, XML)|*.DAT;*.XML";
-
+         var dialog = new SaveFileDialog();
+         dialog.Filter = "fileTypes with serializer (DAT, XML, JSON)|*.DAT;*.XML; .JSON;";
          if (dialog.ShowDialog() == true)
          {
-            if (Path.GetExtension(dialog.FileName) == ".dat")
+            switch (Path.GetExtension(dialog.FileName))
             {
-               new BinaryParser().ToFile(dialog.FileName, mbList);
-            }
-            else if (Path.GetExtension(dialog.FileName) == ".xml")
-            {
-               new XmlParser().ToFile(dialog.FileName, mbList);
+               case ".dat":
+                  new BinaryParser().ToFile(dialog.FileName, mbList);
+                  break;
+               case ".xml":
+                  new XmlParser().ToFile(dialog.FileName, mbList);
+                  break;
+               case ".json":
+                  new JsonParser().ToFile(dialog.FileName, mbList);
+                  break;
+               default:
+                  Console.WriteLine("Format Unbekannt!!!!");
+                  break;
             }
          }
       }
 
       private void buttonLoadList_Click(object sender, RoutedEventArgs e)
       {
-         OpenFileDialog dialog = new OpenFileDialog();
-         dialog.Filter = "Serialized Files (DAT, XML)|*.DAT;*.XML;";
-
+         var dialog = new OpenFileDialog();
+         dialog.Filter = "Serialized Files (DAT, XML, JSON)|*.DAT;*.XML; .JSON;";
          if (dialog.ShowDialog() == true)
          {
-            if (Path.GetExtension(dialog.FileName) == ".dat")
+            switch (Path.GetExtension(dialog.FileName))
             {
-               mbList.AddRange(new BinaryParser().FromFile<MobilePhoneList>(dialog.FileName));
-               listViewMobilePhoneList.Items.Refresh();
+               case ".dat":
+                  mbList.AddRange(new BinaryParser().FromFile<MobilePhoneList>(dialog.FileName));
+                  listViewMobilePhoneList.Items.Refresh();
+                  break;
+               case ".xml":
+                  mbList.AddRange(new XmlParser().FromFile<MobilePhoneList>(dialog.FileName));
+                  listViewMobilePhoneList.Items.Refresh();
+                  break;
+               case ".json":
+                  mbList.AddRange(new JsonParser().FromFile<MobilePhoneList>(dialog.FileName));
+                  listViewMobilePhoneList.Items.Refresh();
+                  break;
+               default:
+                  Console.WriteLine("Format Unbekannt!!!!");
+                  break;
             }
-            else if (Path.GetExtension(dialog.FileName) == ".xml")
-            {
-               mbList.AddRange(new XmlParser().FromFile<MobilePhoneList>(dialog.FileName));
-               listViewMobilePhoneList.Items.Refresh();
-
-            }
-
          }
       }
    }
