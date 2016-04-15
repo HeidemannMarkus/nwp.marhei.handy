@@ -47,7 +47,7 @@ namespace GUI_WPF3
       private void buttonSaveList_Click(object sender, RoutedEventArgs e)
       {
          var dialog = new SaveFileDialog();
-         dialog.Filter = "fileTypes with serializer (DAT, XML, JSON)|*.DAT;*.XML; .JSON;";
+         dialog.Filter = "fileTypes with serializer (DAT, XML, JSON, CSV)|*.DAT;*.XML; .JSON; *.CSV";
          if (dialog.ShowDialog() == true)
          {
             switch (Path.GetExtension(dialog.FileName))
@@ -60,6 +60,9 @@ namespace GUI_WPF3
                   break;
                case ".json":
                   new JsonParser().ToFile(dialog.FileName, mbList);
+                  break;
+               case ".csv":
+                  new MobilePhoneListCsvParser().toFile(dialog.FileName, mbList);
                   break;
                default:
                   Console.WriteLine("Format Unbekannt!!!!");
