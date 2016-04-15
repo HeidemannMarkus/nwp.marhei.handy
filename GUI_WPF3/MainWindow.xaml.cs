@@ -62,7 +62,7 @@ namespace GUI_WPF3
                   new JsonParser().ToFile(dialog.FileName, mbList);
                   break;
                case ".csv":
-                  new MobilePhoneListCsvParser().toFile(dialog.FileName, mbList);
+                  new MobilePhoneListCsvParser().ToFile(dialog.FileName, mbList);
                   break;
                default:
                   Console.WriteLine("Format Unbekannt!!!!");

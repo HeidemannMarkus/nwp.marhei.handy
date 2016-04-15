@@ -21,7 +21,7 @@ namespace nwp.marhei.mobilephoneLibary.Parser
          }
       }
 
-      public void toFile(string filepath, MobilePhoneList list)
+      public void ToFile(string filepath, MobilePhoneList list)
       {
          StreamWriter sw = new StreamWriter(filepath);
          var parsed = ToCsv(";", list);
