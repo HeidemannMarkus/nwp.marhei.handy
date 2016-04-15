@@ -6,28 +6,28 @@
         xmlns:local="clr-namespace:GUI_WPF3"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="662.5">
-    <GroupBox x:Name="groupBox" Header="GroupBox" HorizontalAlignment="Left" Margin="0,0,0,0"
+    <GroupBox x:Name="GroupBox" Header="GroupBox" HorizontalAlignment="Left" Margin="0,0,0,0"
               VerticalAlignment="Top" Height="200" Width="275">
         <Grid>
-            <Label x:Name="labelProducer" Content="Producer" HorizontalAlignment="Left" Margin="0,0,0,0"
+            <Label x:Name="LabelProducer" Content="Producer" HorizontalAlignment="Left" Margin="0,0,0,0"
                    VerticalAlignment="Top" />
-            <Label x:Name="labelModel" Content="Model" HorizontalAlignment="Left" Margin="0,30,0,0"
+            <Label x:Name="LabelModel" Content="Model" HorizontalAlignment="Left" Margin="0,30,0,0"
                    VerticalAlignment="Top" />
-            <Label x:Name="labelSerial_Number" Content="Serial Number" HorizontalAlignment="Left" Margin="0,60,0,0"
+            <Label x:Name="LabelSerialNumber" Content="Serial Number" HorizontalAlignment="Left" Margin="0,60,0,0"
                    VerticalAlignment="Top" />
-            <Label x:Name="labelPrice" Content="Price" HorizontalAlignment="Left" Margin="0,90,0,0"
+            <Label x:Name="LabelPrice" Content="Price" HorizontalAlignment="Left" Margin="0,90,0,0"
                    VerticalAlignment="Top" />
-            <TextBox x:Name="textBoxProducer" HorizontalAlignment="Left" Height="23" Margin="100,0,0,0"
+            <TextBox x:Name="TextBoxProducer" HorizontalAlignment="Left" Height="23" Margin="100,0,0,0"
                      TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
-            <TextBox x:Name="textBoxModel" HorizontalAlignment="Left" Height="23" Margin="100,30,0,0"
+            <TextBox x:Name="TextBoxModel" HorizontalAlignment="Left" Height="23" Margin="100,30,0,0"
                      TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
-            <TextBox x:Name="textBoxSerial_Number" HorizontalAlignment="Left" Height="23" Margin="100,60,0,0"
+            <TextBox x:Name="TextBoxSerialNumber" HorizontalAlignment="Left" Height="23" Margin="100,60,0,0"
                      TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
-            <TextBox x:Name="textBoxPrice" HorizontalAlignment="Left" Height="23" Margin="100,90,0,0"
+            <TextBox x:Name="TextBoxPrice" HorizontalAlignment="Left" Height="23" Margin="100,90,0,0"
                      TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
-            <Button x:Name="buttonAddMobilephone" Content="Add" HorizontalAlignment="Left" Margin="138,141,0,0" VerticalAlignment="Top" Width="75" Click="buttonAddMobilephone_Click"/>
-            <GroupBox x:Name="groupBox1" Header="GroupBox" HorizontalAlignment="Left" Margin="278,0,-369,-5" VerticalAlignment="Top" Width="354" Height="183">
-                <ListView x:Name="listViewMobilePhoneList">
+            <Button x:Name="ButtonAddMobilephone" Content="Add" HorizontalAlignment="Left" Margin="138,141,0,0" VerticalAlignment="Top" Width="75" Click="buttonAddMobilephone_Click"/>
+            <GroupBox x:Name="GroupBox1" Header="GroupBox" HorizontalAlignment="Left" Margin="278,0,-369,-5" VerticalAlignment="Top" Width="354" Height="183">
+                <ListView x:Name="ListViewMobilePhoneList">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="Id" Width="60" DisplayMemberBinding="{Binding Path=Id}" />
@@ -39,8 +39,8 @@
                     </ListView.View>
                 </ListView>
             </GroupBox>
-            <Button x:Name="buttonSaveList" Content="Save List" HorizontalAlignment="Left" Height="30" Margin="300,200,-137,-52" VerticalAlignment="Top" Width="100" Click="buttonSaveList_Click"/>
-            <Button x:Name="buttonLoadList" Content="Load List" HorizontalAlignment="Left" Height="30" Margin="449,200,-287,-52" VerticalAlignment="Top" Width="101" Click="buttonLoadList_Click"/>
+            <Button x:Name="ButtonSaveList" Content="Save List" HorizontalAlignment="Left" Height="30" Margin="300,200,-137,-52" VerticalAlignment="Top" Width="100" Click="buttonSaveList_Click"/>
+            <Button x:Name="ButtonLoadList" Content="Load List" HorizontalAlignment="Left" Height="30" Margin="449,200,-287,-52" VerticalAlignment="Top" Width="101" Click="buttonLoadList_Click"/>
         </Grid>
     </GroupBox>
 </Window>

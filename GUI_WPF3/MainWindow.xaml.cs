@@ -18,30 +18,30 @@ namespace GUI_WPF3
       {
          InitializeComponent();
          ClearInputForHandy();
-         textBoxProducer.Focus();
-         listViewMobilePhoneList.ItemsSource = mbList;
+         TextBoxProducer.Focus();
+         ListViewMobilePhoneList.ItemsSource = mbList;
       }
 
       private void buttonAddMobilephone_Click(object sender, RoutedEventArgs e)
       {
          var h = new Mobilephone
          {
-            Model = textBoxModel.Text,
-            Price = double.Parse(textBoxPrice.Text),
-            Producer = textBoxProducer.Text,
-            SerialNumber = textBoxSerial_Number.Text
+            Model = TextBoxModel.Text,
+            Price = double.Parse(TextBoxPrice.Text),
+            Producer = TextBoxProducer.Text,
+            SerialNumber = TextBoxSerialNumber.Text
          };
          mbList.AddHandy(h);
-         listViewMobilePhoneList.Items.Refresh();
+         ListViewMobilePhoneList.Items.Refresh();
          ClearInputForHandy();
       }
 
       private void ClearInputForHandy()
       {
-         textBoxProducer.Text = string.Empty;
-         textBoxModel.Text = string.Empty;
-         textBoxSerial_Number.Text = string.Empty;
-         textBoxPrice.Text = string.Empty;
+         TextBoxProducer.Text = string.Empty;
+         TextBoxModel.Text = string.Empty;
+         TextBoxSerialNumber.Text = string.Empty;
+         TextBoxPrice.Text = string.Empty;
       }
 
       private void buttonSaveList_Click(object sender, RoutedEventArgs e)
@@ -78,15 +78,15 @@ namespace GUI_WPF3
             {
                case ".dat":
                   mbList.AddRange(new BinaryParser().FromFile<MobilePhoneList>(dialog.FileName));
-                  listViewMobilePhoneList.Items.Refresh();
+                  ListViewMobilePhoneList.Items.Refresh();
                   break;
                case ".xml":
                   mbList.AddRange(new XmlParser().FromFile<MobilePhoneList>(dialog.FileName));
-                  listViewMobilePhoneList.Items.Refresh();
+                  ListViewMobilePhoneList.Items.Refresh();
                   break;
                case ".json":
                   mbList.AddRange(new JsonParser().FromFile<MobilePhoneList>(dialog.FileName));
-                  listViewMobilePhoneList.Items.Refresh();
+                  ListViewMobilePhoneList.Items.Refresh();
                   break;
                default:
                   Console.WriteLine("Format Unbekannt!!!!");
