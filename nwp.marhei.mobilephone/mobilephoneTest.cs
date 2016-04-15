@@ -57,19 +57,19 @@ namespace nwp.marhei.mobilephone
          {
             var temp = new Mobilephone {Producer = "Apple"};
             //Console.WriteLine(phoneList.Search(temp));
-            Console.WriteLine((phoneList.GetThreeCheapestMobilePhones()));
+//            Console.WriteLine((phoneList.GetThreeCheapestMobilePhones()));
          }
          catch (Exception e)
          {
             Console.WriteLine(e.Message);
          }
          var filepath =
-              @"D:\MyUserData\Documents\Ausbildung\Vertiefung - Programmiertechnik\nwp.marhei.handy\nwp.marhei.handy\nwp.marhei.mobilephoneLibary\Serialize\handyList.xml";
+              @"D:\MyUserData\Documents\Ausbildung\Vertiefung - Programmiertechnik\nwp.marhei.handy\nwp.marhei.handy\nwp.marhei.mobilephoneLibary\Serialize\handyList.json";
 
 
-         new XmlParser().ToFile(filepath, phoneList);
+         new JsonParser().ToFile(filepath, phoneList);
 
-         //Console.WriteLine(phoneList.ToString());
+         Console.WriteLine(new JsonParser().FromFile<MobilePhoneList>(filepath));
          Console.ReadKey();
       }
    }

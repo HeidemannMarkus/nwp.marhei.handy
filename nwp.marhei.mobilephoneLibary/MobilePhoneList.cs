@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using nwp.marhei.mobilephoneLibary.Exceptions;
 
 namespace nwp.marhei.mobilephoneLibary
 {
    [Serializable]
+   [DataContract]
    public class MobilePhoneList : List<Mobilephone>, IMobilePhoneList
    {
       public MobilePhoneList()
