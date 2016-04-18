@@ -3,11 +3,13 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.Serialization;
+using FileHelpers;
 
 namespace nwp.marhei.mobilephoneLibary
 {
    [Serializable]
    [DataContract]
+   [DelimitedRecord(",")]
    public class Mobilephone : DomainObject, IMobilephone
    {
       [DataMember]

@@ -47,7 +47,7 @@ namespace GUI_WPF3
       private void buttonSaveList_Click(object sender, RoutedEventArgs e)
       {
          var dialog = new SaveFileDialog();
-         dialog.Filter = "fileTypes with serializer (DAT, XML, JSON, CSV)|*.DAT;*.XML; .JSON; *.CSV";
+         dialog.Filter = "fileTypes with serializer (DAT, XML, JSON, CSV)|*.DAT;*.XML; *.JSON; *.CSV";
          if (dialog.ShowDialog() == true)
          {
             switch (Path.GetExtension(dialog.FileName))
@@ -62,7 +62,7 @@ namespace GUI_WPF3
                   new JsonParser().ToFile(dialog.FileName, mbList);
                   break;
                case ".csv":
-                  new MobilePhoneListCsvParser().ToFile(dialog.FileName, mbList);
+                  new CsvParser().ToFile(dialog.FileName, mbList);
                   break;
                default:
                   Console.WriteLine("Format Unbekannt!!!!");
@@ -74,7 +74,7 @@ namespace GUI_WPF3
       private void buttonLoadList_Click(object sender, RoutedEventArgs e)
       {
          var dialog = new OpenFileDialog();
-         dialog.Filter = "Serialized Files (DAT, XML, JSON)|*.DAT;*.XML; .JSON;";
+         dialog.Filter = "Serialized Files (DAT, XML, JSON, CSV)|*.DAT;*.XML; *.JSON; *CSV;";
          if (dialog.ShowDialog() == true)
          {
             switch (Path.GetExtension(dialog.FileName))
@@ -89,6 +89,10 @@ namespace GUI_WPF3
                   break;
                case ".json":
                   mbList.AddRange(new JsonParser().FromFile<MobilePhoneList>(dialog.FileName));
+                  ListViewMobilePhoneList.Items.Refresh();
+                  break;
+               case ".csv":  
+                  mbList.AddRange((MobilePhoneList) new CsvParser().FromFile<Mobilephone>(dialog.FileName));
                   ListViewMobilePhoneList.Items.Refresh();
                   break;
                default:
