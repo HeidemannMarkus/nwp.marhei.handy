@@ -3,7 +3,7 @@ using System.Runtime.Serialization.Json;
 
 namespace ParserLibrary
 {
-   public class JsonParser
+   public class JsonParser : ISerializeStuff
    {
       public void ToFile<T>(string filepath, T toSerialize)
       {
