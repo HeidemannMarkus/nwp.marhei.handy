@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using FileHelpers;
 
-namespace nwp.marhei.mobilephoneLibary.Parser
+namespace ParserLibrary
 {
    public class CsvParser 
    {

@@ -50,14 +50,13 @@
     <Compile Include="IMobilePhoneList.cs" />
     <Compile Include="mobilephone.cs" />
     <Compile Include="MobilePhoneList.cs" />
-    <Compile Include="Parser\BinaryParser.cs" />
-    <Compile Include="Parser\CsvParser.cs" />
-    <Compile Include="Parser\ISerializeStuff.cs" />
-    <Compile Include="Parser\XmlParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Parser\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

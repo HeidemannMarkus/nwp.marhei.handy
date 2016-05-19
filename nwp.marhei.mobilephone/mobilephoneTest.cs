@@ -1,6 +1,5 @@
 ﻿using System;
 using nwp.marhei.mobilephoneLibary;
-using nwp.marhei.mobilephoneLibary.Parser;
 using ParserLibrary;
 
 namespace nwp.marhei.mobilephone

@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices.ComTypes;
-
-namespace nwp.marhei.mobilephoneLibary.Parser
+﻿namespace ParserLibrary
 {
    public interface ISerializeStuff
    {

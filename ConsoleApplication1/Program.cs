@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ConsoleApplication1.Input;
 using ConsoleApplication1.Logic;
 using ConsoleApplication1.Output;
-using nwp.marhei.mobilephoneLibary.Parser;
+using ParserLibrary;
 
 namespace ConsoleApplication1
 {

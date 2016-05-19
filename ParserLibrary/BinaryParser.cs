@@ -2,7 +2,7 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace nwp.marhei.mobilephoneLibary.Parser
+namespace ParserLibrary
 {
    public class BinaryParser : ISerializeStuff
    {

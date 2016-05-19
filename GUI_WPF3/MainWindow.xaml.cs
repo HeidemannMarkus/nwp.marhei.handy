@@ -3,7 +3,6 @@ using System.IO;
 using System.Windows;
 using Microsoft.Win32;
 using nwp.marhei.mobilephoneLibary;
-using nwp.marhei.mobilephoneLibary.Parser;
 using ParserLibrary;
 
 namespace GUI_WPF3

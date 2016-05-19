@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Xml.Serialization;
 
-namespace nwp.marhei.mobilephoneLibary.Parser
+namespace ParserLibrary
 {
    public class XmlParser: ISerializeStuff
    {
