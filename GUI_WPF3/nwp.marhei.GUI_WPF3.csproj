@@ -100,6 +100,10 @@
       <Project>{844d1dfe-d4e7-49ba-84e0-212349f09c48}</Project>
       <Name>nwp.marhei.mobilephoneLibary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ParserLibrary\nwp.marhei.parserLibrary.csproj">
+      <Project>{2dba3fa9-2f4f-46c7-8c02-bbc2854c8a85}</Project>
+      <Name>nwp.marhei.parserLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using nwp.marhei.mobilephoneLibary;
 using nwp.marhei.mobilephoneLibary.Parser;
+using ParserLibrary;
 
 namespace nwp.marhei.mobilephone
 {

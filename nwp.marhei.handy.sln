@@ -1,15 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nwp.marhei.mobilephoneLibary", "nwp.marhei.mobilephoneLibary\nwp.marhei.mobilephoneLibary.csproj", "{844D1DFE-D4E7-49BA-84E0-212349F09C48}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85} = {2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nwp.marhei.mobilephone", "nwp.marhei.mobilephone\nwp.marhei.mobilephone.csproj", "{03529D3E-41C2-47B9-8902-36D0385B1EB9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85} = {2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nwp.marhei.InterfaceExample", "ConsoleApplication1\nwp.marhei.InterfaceExample.csproj", "{ED03E3F8-5858-45A9-9774-076DDA54D2D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nwp.marhei.GUI_WPF3", "GUI_WPF3\nwp.marhei.GUI_WPF3.csproj", "{3544845E-A56B-47A0-AC4E-A8DACD5E3729}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nwp.marhei.parserLibrary", "ParserLibrary\nwp.marhei.parserLibrary.csproj", "{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +73,18 @@ Global
 		{3544845E-A56B-47A0-AC4E-A8DACD5E3729}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3544845E-A56B-47A0-AC4E-A8DACD5E3729}.Release|x86.ActiveCfg = Release|Any CPU
 		{3544845E-A56B-47A0-AC4E-A8DACD5E3729}.Release|x86.Build.0 = Release|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Debug|x86.Build.0 = Debug|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Release|x86.ActiveCfg = Release|Any CPU
+		{2DBA3FA9-2F4F-46C7-8C02-BBC2854C8A85}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

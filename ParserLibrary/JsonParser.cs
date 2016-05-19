@@ -1,9 +1,9 @@
 ﻿using System.IO;
 using System.Runtime.Serialization.Json;
 
-namespace nwp.marhei.mobilephoneLibary.Parser
+namespace ParserLibrary
 {
-   public class JsonParser : ISerializeStuff
+   public class JsonParser
    {
       public void ToFile<T>(string filepath, T toSerialize)
       {
